@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "deployAliases": {
+    "interfaces": {
+      "url": "https://proxy.berkley.minaexplorer.com/graphql",
+      "keyPath": "keys/interfaces.json",
+      "feepayerKeyPath": "/Users/casmirpatterson/.cache/zkapp-cli/keys/zkminadeployer.json",
+      "feepayerAlias": "zkminadeployer",
+      "fee": "0.1"
+    }
+  }
+}
