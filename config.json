@@ -1,4 +1,28 @@
 {
   "version": 1,
-  "deployAliases": {}
+  "deployAliases": {
+    "zkfluence-shield": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/zkfluence-shield.json",
+      "feepayerKeyPath": "/Users/casmirpatterson/.cache/zkapp-cli/keys/zkminadeployer.json",
+      "feepayerAlias": "zkminadeployer",
+      "fee": "0.1"
+    },
+    "zkfluencershield": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/zkfluencershield.json",
+      "feepayerKeyPath": "/Users/casmirpatterson/.cache/zkapp-cli/keys/ekdmpxvsevfmv5vbpqoxhsp1ddartteug3japrxc21o1wztjdupy.json",
+      "feepayerAlias": "ekdmpxvsevfmv5vbpqoxhsp1ddartteug3japrxc21o1wztjdupy",
+      "fee": "0.1",
+      "smartContract": "InfluencerContract"
+    },
+    "zkshield": {
+      "url": "https://proxy.berkeley.minaexplorer.com/graphql",
+      "keyPath": "keys/zkshield.json",
+      "feepayerKeyPath": "/Users/casmirpatterson/.cache/zkapp-cli/keys/ekdmpxvsevfmv5vbpqoxhsp1ddartteug3japrxc21o1wztjdupy.json",
+      "feepayerAlias": "ekdmpxvsevfmv5vbpqoxhsp1ddartteug3japrxc21o1wztjdupy",
+      "fee": "0.1",
+      "smartContract": "Shield"
+    }
+  }
 }

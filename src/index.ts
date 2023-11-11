@@ -1,3 +1,6 @@
-import { Add } from './Add.js';
+import { AuditingInstance, Shield } from './interfaces.js';
+export { Shield,  AuditingInstance };
 
-export { Add };
+// import { InfluencerContract, User  } from './influencer.js';
+// export { InfluencerContract, User };
+
