@@ -3,24 +3,26 @@ import Image from 'next/image';
 import { useEffect } from 'react';
 import heroMinaLogo from '@/public/assets/hero-mina-logo.svg';
 import Link from 'next/link';
+// import { Shield } from '@/03-deploying-to-a-live-network/build/src/build.json';
 
 export default function Home() {
   useEffect(() => {
     (async () => {
       const { Mina, PublicKey } = await import('o1js');
-      // const { Shield } = await import('/Users/casmirpatterson/zkApp/zkShield/03-deploying-to-a-live-network/build/src);
+      // const { Shield } = await import('@/zkApp/zkShield/03-deploying-to-a-live-network/build/src);
 
       // Update this to use the address (public key) for your zkApp account.
       // To try it out, you can try this address for an example "Add" smart contract that we've deployed to
-      // Berkeley Testnet B62qkwohsqTBPsvhYE8cPZSpzJMgoKn4i1LQRuBAtVXWpaT4dgH6WoA.
-      const zkAppAddress = '';
+      // Berkeley Testnet B62qqbrUtddZv8iU7YjDvRXhfkr23fWEL6BZPQSLUUT1kedvjvVwuas.
+      const zkAppAddress =
+        '5Jtoqoe8pWjKSpfrCy6Jeqe99PZxuCUMKqWwXK99AYM8ywzz4BzY';
       // This should be removed once the zkAppAddress is updated.
       if (!zkAppAddress) {
         console.error(
           'The following error is caused because the zkAppAddress has an empty string as the public key. Update the zkAppAddress with the public key for your zkApp account, or try this address for an example "Add" smart contract that we deployed to Berkeley Testnet: B62qkwohsqTBPsvhYE8cPZSpzJMgoKn4i1LQRuBAtVXWpaT4dgH6WoA'
         );
       }
-      //const zkApp = new Add(PublicKey.fromBase58(zkAppAddress))
+      const zkApp = new Shield(PublicKey.fromBase58(zkAppAddress));
     })();
   }, []);
 
@@ -51,6 +53,7 @@ export default function Home() {
         Deployed Shield Contract
       </Link>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left"></div>
+      <p>built with o1js</p>
     </main>
   );
 }
